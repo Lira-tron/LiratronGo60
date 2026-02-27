@@ -27,6 +27,8 @@
 
 /* On demand includes */
 #include <dt-bindings/zmk/input_transform.h>
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
