@@ -205,47 +205,34 @@
 /* Per-layer underglow color macros */
 / {
     macros {
-        rgb_base: rgb_base {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(0,0,10)>;
-        };
-        rgb_number: rgb_number {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(120,100,10)>;
-        };
-        rgb_game: rgb_game {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(180,100,10)>;
-        };
-        rgb_magic: rgb_magic {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(0,100,10)>;
-        };
-
         /* Layer switch + set color macros */
         to_number: to_number {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to LAYER_Number>, <&rgb_number>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&to LAYER_Number>, <&rgb_ug RGB_COLOR_HSB(120,100,10)>;
         };
         to_game: to_game {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to LAYER_Game_Colemak>, <&rgb_game>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&to LAYER_Game_Colemak>, <&rgb_ug RGB_COLOR_HSB(180,100,10)>;
         };
         to_magic: to_magic {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to LAYER_Magic>, <&rgb_magic>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&to LAYER_Magic>, <&rgb_ug RGB_COLOR_HSB(0,100,10)>;
         };
         to_base: to_base {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&rgb_base>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&to 0>, <&rgb_ug RGB_COLOR_HSB(0,0,10)>;
         };
     };
 };
