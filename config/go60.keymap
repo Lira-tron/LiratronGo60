@@ -211,28 +211,28 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&to LAYER_Number>, <&rgb_ug RGB_COLOR_HSB(120,100,10)>;
+            bindings = <&to LAYER_Number>, <&macro_tap &rgb_ug RGB_COLOR_HSB(120,100,10)>;
         };
         to_game: to_game {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&to LAYER_Game_Colemak>, <&rgb_ug RGB_COLOR_HSB(180,100,10)>;
+            bindings = <&to LAYER_Game_Colemak>, <&macro_tap &rgb_ug RGB_COLOR_HSB(180,100,10)>;
         };
         to_magic: to_magic {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&to LAYER_Magic>, <&rgb_ug RGB_COLOR_HSB(0,100,10)>;
+            bindings = <&to LAYER_Magic>, <&macro_tap &rgb_ug RGB_COLOR_HSB(0,100,10)>;
         };
         to_base: to_base {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&to 0>, <&rgb_ug RGB_COLOR_HSB(0,0,10)>;
+            bindings = <&to 0>, <&macro_tap &rgb_ug RGB_COLOR_HSB(0,0,10)>;
         };
     };
 };
